@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  color: white;
+}
+
+.header {
+  padding: 1rem;
+  text-align: center;
+  background-color: #1c1c1c;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: space-around;
+  background: #2a2a2a;
+  padding: 0.5rem 0;
+}
+
+.tab-buttons button {
+  background: none;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+}
+
+.tab-buttons .active {
+  border-bottom: 2px solid lime;
+}
+
+.lectures {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.lecture-card {
+  background: #1a1a1a;
+  margin: 0.5rem;
+  padding: 0.5rem;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 1px solid #333;
+}
+
+.lecture-card img {
+  width: 80px;
+  height: 80px;
+  margin-right: 1rem;
+  border-radius: 6px;
+}
+
+.lecture-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: yellow;
+}
+
+.video-player-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.video-player-container iframe {
+  width: 100%;
+  height: 70%;
+  border: none;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.controls button {
+  background: #1e1e1e;
+  color: #00f0ff;
+  font-size: 1.5rem;
+  border: none;
+  margin: 0.5rem;
+  padding: 0.8rem 1rem;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.controls button:hover {
+  background: #333;
+  color: #00ffff;
+  transform: scale(1.1);
+}
+
+.go-back {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.go-back:hover {
+  background: rgba(255, 0, 0, 0.8);
+  transform: scale(1.1);
+}.video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.video-container {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  background: #000;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 450px;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}

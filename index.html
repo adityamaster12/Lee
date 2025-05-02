@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lecture - Light Reflection</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://player.vimeo.com/api/player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <h2>Light - Reflection and Refraction</h2>
+  </div>
+
+  <div class="tab-buttons">
+    <button class="active">Lectures</button>
+    <button>Notes</button>
+    <button>DPP</button>
+    <button>DPP Solution</button>
+  </div>
+
+  <div class="lectures">
+    <div class="lecture-card" onclick="playVideo('https://player.vimeo.com/video/1080959719')">
+      <img src="https://iili.io/3jlb0Dg.th.jpg" alt="Lecture 1" />
+      <div class="lecture-info">
+        <h3>real numbers lec 2</h3>
+        <p>ritik  Sir | 28 April 2025 | 1:08:08</p>
+      </div>
+    </div>
+
+    <div class="lecture-card" onclick="playVideo('https://player.vimeo.com/video/1046541768')">
+      <img src="https://iili.io/3jlyqSp.jpg" alt="Lecture 2" />
+      <div class="lecture-info">
+        <h3>olympiard classes</h3>
+        <p>By Rakshak Sir | 18 April 2025 | 1:42:04</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="video-player-container" id="videoContainer">
+    <!-- Go Back Button -->
+    <button class="go-back" onclick="goBack()">
+      <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <!-- Vimeo Video -->
+    <iframe id="vimeoPlayer" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+    <!-- Controls -->
+    <div class="controls">
+      <button onclick="pausePlay()">
+        <i class="fas fa-play-circle" id="playPauseIcon"></i>
+      </button>
+      <button onclick="rotateScreen()">
+        <i class="fas fa-rotate-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
